@@ -17,7 +17,7 @@ If you are a Java developer, you might want to create a customized version of th
    SQLTrainer.jar (runnable jar to start the SQLTrainer) (**)
 ```
 
-When executing the program, make sure that the sql-trainer-config directory is in the current directory of the execution environment. To just run the SQLTrainer, the complete subdirectory (*) and the jar-file (**) are sufficient.
+When executing the program, make sure that the sql-trainer-config directory is in the current directory of the execution environment. To just run the SQLTrainer, the complete subdirectory `(*)` and the jar-file `(**)` are sufficient.
 
 For compilation, the build path must be set correctly. All source code is located in the src folder and additional jar libraries from the lib folder are needed. For Eclipse users, it is recommended to just import the whole project.
 SVN users might remember, that '.svn' subdirectories must be excluded from the source path (exclude syntax in Eclipse: `**/.svn/*`).
