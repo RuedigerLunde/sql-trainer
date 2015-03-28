@@ -1,0 +1,145 @@
+SQL Trainer
+-----------
+
+Preconditions:
+a) A java virtual machine is installed on your computer which is up to date.
+b1) An active connection to the HS-ULM intranet exists, e.g. via VPN-Client.
+b2) OR: A (possibly locally installed) MySQL server with training data is available.
+
+Starting the Application:
+- Unzip the archive (if software was delivered as zip).
+- Make sure, that SQLTrainer.jar is placed in same folder as sql-trainer-config.
+- Double-click the SQLTrainer.jar file.
+
+Customisation:
+Training data and the used database server can be changed easily without modifying the code.
+Just edit file static-properties.xml (the static-properties-xy.xml files provide examples)
+and add new files into the dbinfo directory following the obvious name conventions.
+
+Setting up a development environment:
+See wiki documents.
+
+Please consult the change log below to see what's new.
+
+Have fun,
+Ruediger Lunde
+
+
+
+Release 5.0
+-----------
+New
+- Project restructured and moved to GitHub
+
+Release 4.1
+-----------
+New
+- Now different kinds of databases are supported.
+  Especially, MySQL support was added. Just replace the static-properties.xml
+  to connect to a locally installed MySQL database.
+
+Release 4.0
+-----------
+Changed
+- Session properties are now saved in the user's home directory (.sql-trainer).
+Improved
+- Major redesign of the interface between view and controller.
+
+Release 3.0
+-----------
+Changed:
+- Now, IPv4 is set to preffered in System Properties
+  (needed for VPN which currently does not support IPv6)
+
+
+Release 2.9
+-----------
+Improved:
+- Locking/unlocking dialog now with password field.
+- Editor must specify a name.
+- File extension xml now automatically added for exercise sets.
+- Support of tt-Font in questions and introduction texts.
+
+
+Release 2.8
+-----------
+New features:
+- Feedback gives points for correct answers.
+- Feedback for the whole exercise set can now be generated.
+
+Release 2.7
+-----------
+New features:
+- New Database Fahrtenbuch included.
+
+
+Release 2.6
+-----------
+
+New features:
+- New indentation features added to answer area.
+  Try tab, shift-tab; also in combination with text selection.
+- Editor layout for exercise authoring improved.
+
+
+Release 2.5
+-----------
+
+New features:
+- Feedback improved, now distinguishes between wrong values and
+  correct values in wrong order.
+- Undo management added for text areas.
+- Code documentation improved.
+
+Fixed bugs:
+- Application frame lost control after editing an exercise set and
+  then loading an HTML file instead of an XML file. 
+
+
+Release 2.4
+-----------
+
+New features:
+- Solution encryption is possible. From now on, exercise sets will
+  contain solution information. Unfortunately, old versions of this software
+  will not be able to read the new files.
+- Feedback information is now generated which tells the user, whether his/her
+  answer is correct or not (for select statements only).
+- Authoring functionality has also been added. It is now possible to create
+  new exercise sets without editing xml documents.
+- Session management is now available. While starting, the application tries
+  to restore properties from the last session including frame size and
+  connection data.
+- The whole source code is available (but not documented yet). However, it
+  uses a slightly different encryption class implementation ;-)
+
+Release 2.3
+-----------
+
+New features:
+- New View-Menu introduced. It enables the user to change the look and feel and
+  also the size of all fonts, which might be useful when using high resolution
+  displays.
+
+Release 2.2
+-----------
+
+New features:
+- When loading an exercise set, the html viewer is now updated
+  if a corresponding html file is available for the exercise set.
+- A new error handler has been implemented which communicates more
+  details to the user.
+- A new popup menu was added to the log area.
+
+Release 2.1
+-----------
+
+New features:
+- It is now possible to restrict statement execution to a marked
+  region within the text area (just mark and then press execute).
+  This feature makes testing more comfortable.
+- A warning is displayed, when overwriting existing files.
+- A warning is displayed, when exiting the application and unsaved changes exist.
+
+Fixed bugs:
+- Sometimes, the last answer edits were not saved.

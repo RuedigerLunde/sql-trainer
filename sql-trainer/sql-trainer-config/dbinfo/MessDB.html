@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Beschreibung zur MessDB</title>
+</head>
+
+<body>
+<h1>Beschreibung zur MessDB</h1>
+<p>Die Datenbank MessDB dient zur Verwaltung von Messergebnissen und hat
+folgendes (vereinfachtes) Datenbankschema:</p>
+
+<pre>
+MessDB = (
+   Messung = (MessungsNr, MethodenNr, MessingenieurNr, Testobjekt, Startzeit, Endezeit),
+   Messmethode = (MethodenNr, MethodenName, BezeichnungX, BezeichnungY, Messanleitung),
+   Messkurve = (MessungsNr, X, Y),
+   Messingenieur = (MessingenieurNr, Name, Vorname),
+   Messung(MethodenNr) references MessMethode(MethodenNr),
+   Messung(MessingenieurNr) references Messingenieur(MessingenieurNr),
+   Messkurve(MessungsNr) references Messung(MessungsNr)
+)
+</pre>
+
+<p>Jede Messung wird von einem Messingenieur innerhalb eines bestimmten Zeitraums an
+einem Testobjekt unter Anwendung einer Messmethode durchgeführt.</p>
+
+<p>Das Ergebnis einer Messung wird in einer Messkurve festgehalten. Dabei ist eine
+Messkurve eine Menge von Punkten im zweidimensionalen Raum. Der fiktive Datensatz
+(1, 2.0, 3.0) in der Tabelle Messkurve würde bedeuten, dass die Messkurve
+von Messung 1 den Punkt (2.0, 3.0) enthält. Die genaue Bedeutung der Koordinaten
+(physikalische Größe, Maßeinheit) geht aus den Attributen BezeichnungX und
+BezeichnungY der zur Anwendung gekommenen Messmethode hervor. Beispielsweise
+wird bei der Messmethode 5 (Motorleistungsmessung) der vorgegebene Drehzahlwert
+in Umdrehungen pro Minute auf der X-Achse aufgetragen. Die dabei gemessene
+Leistung wird dann in PS auf der Y-Achse aufgetragen.</p>
+</body>
+</html>

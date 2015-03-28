@@ -1,0 +1,29 @@
+<!-- Format for sql exercises set documents. Author: R. Lunde -->
+
+<!ELEMENT exercise-set (intro, exercise*)>
+<!ATTLIST exercise-set course CDATA #REQUIRED>
+<!ATTLIST exercise-set lecturer CDATA #REQUIRED>
+<!ATTLIST exercise-set id CDATA #REQUIRED>
+<!ATTLIST exercise-set db CDATA #IMPLIED>
+<!ATTLIST exercise-set editor CDATA #IMPLIED>
+<!ATTLIST exercise-set lastEdit CDATA #IMPLIED>
+<!ATTLIST exercise-set checksum CDATA #IMPLIED>
+<!ATTLIST exercise-set hasha CDATA #IMPLIED>
+<!ATTLIST exercise-set hashs CDATA #IMPLIED>
+<!ATTLIST exercise-set passwd CDATA #IMPLIED>
+<!ELEMENT intro (#PCDATA|p|b|i|tt|ul|pre)*>
+<!ELEMENT exercise (question, answer?, solution?)>
+<!ATTLIST exercise id CDATA #REQUIRED>
+<!ATTLIST exercise type CDATA #IMPLIED>
+<!ATTLIST exercise theme CDATA #IMPLIED>
+<!ELEMENT question (#PCDATA|p|b|i|tt|ul|pre)*>
+<!ELEMENT answer (#PCDATA)>
+<!ELEMENT solution (#PCDATA)>
+<!ATTLIST solution test CDATA #IMPLIED>
+<!ELEMENT p (#PCDATA|b|i|pre)*>
+<!ELEMENT b (#PCDATA|i|tt)*>
+<!ELEMENT i (#PCDATA|b|tt)*>
+<!ELEMENT tt (#PCDATA|b|i)*>
+<!ELEMENT ul (li*)>
+<!ELEMENT li (#PCDATA|p|b|i|tt|ul)*>
+<!ELEMENT pre (#PCDATA)>

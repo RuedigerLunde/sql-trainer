@@ -1,0 +1,38 @@
+<html>
+<head>
+<title>Beschreibung zur BookShopDB</title>
+</head>
+
+<body>
+<h1>Beschreibung zur BookShopDB</h1>
+<p>Die Datenbank BookShopDB verwaltet für den Verkauf von Büchern relevante
+Daten.nIhr Datenmodell basiert auf einer Vorlage, die dem Tool DBDesigner 4
+entnommen wurde. Zentrale Aufgabe der Datenbank ist es,  Kunden, Bücher,
+Bestellungen und Rechnungen einer Online-Buchhandlung zu verwalten.
+Der modellierte Anwendungsauschnitt wird im Folgenden erläutert. </p>
+
+<p>Jede Bestellung wird von einem Kunden zu einem bestimmten Zeitpunkt
+veranlasst und durch einen Mitarbeiter bearbeitet. Bestellungen enthalten
+einzelne Positionen (OrderLineItems). In Abhängigkeit von der aktuellen
+Verfügbarkeit der Bücher kann es sein, dass von einer Bestellung nur
+einzelne Positionen sofort geliefert werden können. Deshalb wird der
+Lieferstatus bei jeder Position vermerkt. Um die Lagerhaltung zu optimieren,
+werden für jedes Buch neben dem aktuellen Bestand an verfügbaren Exemplaren
+eine Mindest- und eine Höchstzahl verwaltet. Fällt der aktuelle Bestand unter
+die Mindestzahl, sollte eine Nachbestellung beim Großhändler erfolgen. Dieser
+Vorgang liegt jedoch außerhalb des Modells. Für jede Buchlieferung erhält der
+Kunde eine Rechnung. Die Ausstellung einer Rechnung liegt in der Verantwortung
+des gleichen Mitarbeiters, der auch die Bestellung bearbeitet hat. Der
+Rechnungsbetrag hängt von Verkaufspreis und Anzahl der gelieferten Bücher ab,
+sowie vom persönlichen Rabatt des Kunden. Mit jeder Rechnung wird das
+Rechnungsdatum, sowie der Zahlungsstatus vermerkt. Bleibt die Zahlung aus,
+erhält der Kunde Mahnungen (Tabelle DunningLetter). Eine Rechnung kann auch
+annulliert werden. Grund dafür könnte z.B. die Rückgabe eines Buches oder ein
+wegen Mängeln ausgehandelter Preisnachlass sein. Annullierungen werden in der
+Tabelle Cancellation  verwaltet. Dort wird jeweils auch ein Kommentar hinterlegt,
+sowie optional eine Referenz auf die korrigierte Rechnung. Um die Kunden bei der
+Stange zu halten, werden die Kunden von Zeit zu Zeit kontaktiert (Tabelle News).</p>
+
+</body>
+
+</html>

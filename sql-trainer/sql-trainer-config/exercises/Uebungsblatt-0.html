@@ -1,0 +1,142 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>
+               &Uuml;bungsblatt 0</title>
+</head>
+<body>
+<center>
+<h2>Einf&uuml;hrung in Datenbanken (DABAS-MD2)<br>&Uuml;bungsblatt 0</br>
+</h2>
+<h3>Prof. Dr. R. Lunde</h3>
+</center>
+<p>
+<i>Datenbank: WhiskyDB</i>
+<br>
+<i>Bearbeitung: </i>
+<br>
+<i>Letzte &Auml;nderung: </i>
+</p>
+<p>Nachdem Sie das Dokument ToolUebersicht.pdf gelesen haben und den SQLTrainer erfolgreich
+installiert haben, begleitet Sie dieses &Uuml;bungsblatt durch die ersten Schritte bei der
+Anwendung des Werkzeugs. Jedes &Uuml;bungsblatt liegt sowohl als HTML-Datei zur Anzeige
+im Web-Browser als auch als XML-Datei vor. Die XML-Version kann &uuml;ber [File][Load Exercises] vom
+SQLTrainer eingelesen werden, was Sie - wenn nicht bereits geschehen - nun ausprobieren sollten.
+Der SQLTrainer erfragt dabei Ihren Namen um diesen zusammen mit den von Ihnen eingegebenen
+Antworten abspeichern zu k&ouml;nnen.
+<p>Mit dem Knopf [Next Exercise] oder [F2] gelangen Sie zur ersten Aufgabe.</p>
+	
+</p>
+<h3>Aufgabe 1a
+     (SQLTrainer)
+   </h3>
+Es gibt verschiedene Aufgabentypen. SQL-Aufgaben erkennen Sie daran, dass der [Execute]-Knopf
+aktiv wird. Machen Sie sich aber zun&auml;chst mit den Bedienelementen des SQLTrainers vertraut.
+Auf der Werkzeugleiste finden Sie neben der Aufgabennavigation eine Datenbank-Auswahl. Zur
+gew&auml;hlten Datenbank erscheinen in den Tabs [DB Schema] und [DB Description] n&uuml;tzliche
+Informationen. Die Gr&ouml;&szlig;e der Anzeigefelder k&ouml;nnen Sie per Maus-Drag auf die entsprechenden
+Trennlinien anpassen. Weiter mit [F2].
+    <h3>Aufgabe 1b
+     (SQLTrainer)
+   </h3>
+Testen Sie nun die Eingabe einer SQL-Anweisung. Tippen Sie dazu im Antwortfeld die folgende
+Anweisung ein: <pre>select * from Whiskies</pre>
+Stellen Sie sicher, dass die WhiskyDB ausgw&auml;hlt ist, und dr&uuml;cken Sie [Execute]. Best&auml;tigen
+Sie die voreingestellten Verbindungsdaten. Wenn die Verbindung zum Server steht erscheint
+im [Results]-Tab die Tabelle, die der Server als Antwort zur&uuml;ck meldet. Andernfalls m&uuml;ssen Sie
+sich mit der Fehlermeldung im unteren Bereich des Fensters auseinandersetzen.
+Der Fehleranzeigebereich verf&uuml;gt &uuml;ber ein Kontextmen&uuml;
+und kann durch Wahl von [Clear] wieder geleert und verdeckt werden.
+
+<p>Sie k&ouml;nnen
+ auch mehrere Select-Anweisungen eingeben und dann durch Markieren entscheiden,
+welche Anweisung ausgef&uuml;hrt werden soll.</p>
+		
+<h4>L&ouml;sung</h4>
+<pre>select * from Whiskies
+
+-- select * from WhiskyBeschreibungen</pre>
+<h3>Aufgabe 1c
+     (SQLTrainer)
+   </h3>Versuchen Sie, eine Anfrage zu formulieren, die die Anzahl der in der Datenbank erfassten
+Whiskies ermittelt und testen Sie die Anfrage mit [Execute]. Auf Wunsch generiert Ihnen
+das System auch eine R&uuml;ckmeldung &uuml;ber die inhaltliche Richtigkeit Ihrer L&ouml;sung
+(Knopf [Feedback]). Nat&uuml;rlich haben nicht alle Aufgaben ein eindeutiges Ergebnis. Deshalb
+kann es auch vollkommen richtige L&ouml;sungen geben, die nicht mit einem Smiley belohnt
+werden.
+
+<p>Zugegeben, die Musterl&ouml;sung ist in diesem Fall  nur einen Tab entfernt ([Solution]). Wer knobelt
+da schon gerne lange herum. Deshalb wird bei den folgenden Aufgabenbl&auml;ttern der Zugang
+zur L&ouml;sung mit einem Passwort gesperrt sein. Sie k&ouml;nnen dieses Feature ausprobieren,
+wenn Sie [Exercise][Lock Solutions] aktivieren.</p>
+<h4>L&ouml;sung</h4>
+<pre>select count(*) as Anzahl
+from Whiskies</pre>
+<h3>Aufgabe 1d
+     (SQLTrainer)
+   </h3>
+Ihre Arbeitsergebnisse k&ouml;nnen Sie jeder Zeit mit [File][Save Exercises] abspeichern.
+Neben einer entsprechenden XML-Datei, die Sie erneut laden und weiter bearbeiten k&ouml;nnen, wird
+auch eine HTML-Version erzeugt und im Tab [HTML Export] angezeigt. Beachten Sie, dass bei
+Verwendung des voreingestellen Namens das urspr&uuml;ngliche &Uuml;bungsblatt &uuml;berschrieben wird.
+Tipp: F&uuml;gen Sie in den Namen Ihre Initialen ein, z.B. Uebungsblatt-0.RLu.xml.
+		<h3>Aufgabe 1e
+     (SQLTrainer)
+   </h3>Schlie&szlig;lich k&ouml;nnen Sie mit dem SQLTrainer auch selbst Aufgabenbl&auml;tter entwerfen. Dazu aktivieren
+Sie [View][Enable Authoring]. Nun k&ouml;nnen mit [File][New]  neue Arbeitsbl&auml;tter angelegt werden und mit
+den Funktionen im [Authoring]-Men&uuml; editiert werden (letzteres gilt nat&uuml;rlich nur f&uuml;r nicht gesperrte
+Aufgabenbl&auml;tter).
+
+<p>Jetzt kennen Sie die wichtigsten Handgriffe und k&ouml;nnen beginnen, Ihre ersten
+SQL-Aufgaben zu l&ouml;sen.</p>
+<h3>Aufgabe 2a
+     (einfache Select-Anweisungen)
+   </h3>
+Erzeugen Sie eine Liste aller Whisky-Marken ohne Wiederholungen, aufsteigend sortiert.
+		<h4>L&ouml;sung</h4>
+<pre>select distinct WMarke
+from Whiskies
+order by WMarke</pre>
+<h3>Aufgabe 2b
+     (einfache Select-Anweisungen)
+   </h3>
+Erzeugen Sie eine Liste aller Whiskies, charaktierisiert durch Marke und Alter,
+die mindestens 12 Jahre alt sind, prim&auml;r nach Alter absteigend, dann nach Marke aufsteigend sortiert.
+		<h4>L&ouml;sung</h4>
+<pre>select WMarke, WAlter
+from Whiskies
+where WAlter &gt;= 12
+order by WAlter desc, WMarke</pre>
+<h3>Aufgabe 2c
+     (einfache Select-Anweisungen)
+   </h3>
+Erzeugen Sie eine Liste aller Whisky-Marken, die den Buchstaben 'i' enthalten, ohne Wiederholungen.
+		<h4>L&ouml;sung</h4>
+<pre>select distinct WMarke
+from Whiskies
+where WMarke like '%i%'</pre>
+<h3>Aufgabe 3a
+     (einfache Select-Anweisungen)
+   </h3>
+Wie viele Whiskies sind f&uuml;r die Region Islay Malt erfasst?
+		 <h4>L&ouml;sung</h4>
+<pre>select count(WNr) as 'Anzahl Whiskies'
+from Whiskies
+where Region='Islay Malt'</pre>
+<h3>Aufgabe 3b
+     (einfache Select-Anweisungen)
+   </h3>
+Wie viele Whisky-Marken sind f&uuml;r die Region Islay Malt erfasst?
+		<h4>L&ouml;sung</h4>
+<pre>select count(distinct WMarke) as 'Anzahl Whiskies'
+from Whiskies
+where Region='Islay Malt'</pre>
+<h3>Aufgabe 3c
+     (einfache Select-Anweisungen)
+   </h3>
+Wie alt ist der &auml;lteste Whisky in der Datenbank?
+		<h4>L&ouml;sung</h4>
+<pre>select max(WAlter) as 'Maximales Alter'
+from Whiskies</pre>
+</body>
+</html>

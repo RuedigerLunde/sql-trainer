@@ -1,0 +1,8 @@
+rl.sqltrainer.application
+rl.sqltrainer.domain
+rl.sqltrainer.gui
+rl.sqltrainer.persistence
+rl.util.exceptions
+rl.util.gui
+rl.util.persistence
+rl.util.security

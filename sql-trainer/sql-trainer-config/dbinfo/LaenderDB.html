@@ -1,0 +1,33 @@
+<html>
+<head>
+<title>Beschreibung zur LaenderDB</title>
+</head>
+
+<body>
+<h1>Beschreibung zur LaenderDB</h1>
+<p>Die Datenbank LaenderDB besteht aus lediglich einer Tabellen Laender.
+Sie basiert auf den Daten der cia-Datenbank des Online-Tutorials
+http://www.schulserver.hessen.de/darmstadt/lichtenberg/SQLTutorial/
+und enthält einige Daten aus dem World-Factbook der amerikanischen
+Central Intelligence Agency.</p>
+
+<p>Da es sich nur um eine Tabelle handelt ist das im Folgenden
+angegebene vereinfachte Datenbankschema (ohne Domänen) entsprechend simpel:</p>
+
+<pre>
+LaenderDB = (
+	Laender = (Name, Region, Flaeche, Einwohner, BIP)
+)
+</pre>
+
+Die Bedeutung der Attribute ist wie folgt definiert:
+<ul>
+<li>Name: der Landesname, Schlüssel der Tabelle</li>
+<li>Region: die geographische Region</li>
+<li>Flaeche: die Fläche in Quadratkilometer</li>
+<li>Einwohner: die Anzahl der Einwohner</li>
+<li>BIP: das Bruttoinlandsprodukt in Dollar</li>
+</ul>
+</body>
+
+</html>

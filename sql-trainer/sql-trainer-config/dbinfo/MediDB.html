@@ -1,0 +1,43 @@
+<html>
+<head>
+<title>Beschreibung zur MediDB</title>
+</head>
+
+<body>
+<h1>Beschreibung zur MediDB</h1>
+<p>Die Datenbank MediDB besteht aus den Tabellen Hersteller,
+Medikamente, Substanzen, Bestandteile und Handelspackungen.
+Im Folgenden ist das Datenbankschema in vereinfachter Form
+(ohne Domänen) angegeben. Alle Primärschlüssel (durch Unterstrich
+gekennzeichnet) sind Integer-Attribute.</p>
+
+<pre>
+MediDB = (
+	Hersteller = (Hersteller, Name),
+	Medikamente = (Medikament, Bezeichnung, Hersteller, Bezugsmenge, Einheit),
+	Substanzen = (Substanz, Bezeichnung),
+	Bestandteile = (Medikament, Substanz, Menge),
+	Handelspackungen = (Medikament, Nr, Packungsform, Menge, Masseinheit, Preis),
+
+	Medikamente(Hersteller) references Hersteller(Hersteller),
+	Bestandteile(Medikament) references Medikamente(Medikament),
+	Bestandteile(Substanz) references Substanzen(Substanz),
+	Handelspackungen(Medikament) references Medikamente(Medikament)
+)
+</pre>
+
+<p>Jedes Medikament hat genau einen Hersteller und kann in mehreren
+Handelspackungen erhältlich sein.
+Die Beziehung zwischen Medikamenten und darin enthaltenen Substanzen
+ist eine n:n-Beziehung. Sie wird durch die Bestandteile-Tabelle repräsentiert.
+Mit Hilfe der dort enthaltenen Mengenangaben kann unter Berücksichtigung
+der im jeweiligen Medikament angegebenen Bezugsmenge auf den prozentualen
+Anteil der jeweiligen Substanz am Medikament geschlossen werden.</p>
+
+<p>Beispiel: Angenommen, in der Medikamente-Tabelle würde für Medikament
+1 die Bezugsmenge 1000 und die Einheit ml definiert. Dann würde der folgende
+Eintrag (1, 2, 100) in der Bestandteile-Tabelle bedeuten  dass  1000 ml des
+Medikaments 1 genau 100 ml der Substanz 2 enthalten.</p>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Beschreibung zur FahrtenbuchDB</title>
+</head>
+
+<body>
+<h1>Beschreibung zur FahrtenbuchDB</h1>
+<p>Die Datenbank FahrtenbuchDB enthält einen Auszug aus den gesammelten
+Fahrtenbucheinträgen der Mitarbeiter eines Pharmaunternehmens.</p>
+
+<p>Zu jeder Fahrt werden gespeichert,
+mit welchem Fahrzeug sie durchgeführt wurde,
+wer der Fahrer war,
+wie der Kilometerstand vor und nach der Fahrt war,
+Start- und Zielort sowie ggf. weitere Orte auf dem Weg,
+Zweck der Fahrt,
+Abfahrts- und Ankunftszeit,
+sowie die Kategorie der Fahrt.
+Dabei haben die Kategoriewerte folgende Bedeutung:
+g = geschäftlich, p = privat, wa = Fahrt zwischen Wohnung und Arbeitsstelle.
+Als Identifizierungsmerkmal wird hier ein zusammengesetzter Schlüssel verwendet,
+bestehend aus dem Fahrzeugkennzeichen (selbst ein Fremdschlüssel!)
+und dem Abfahrtskilometerstand.</p>
+
+<p>Kurze (Dienst-)Reisen werden als einfache Fahrt-Datensätze repräsentiert.
+Reisen, die sich über mehrere Tage erstrecken und ggf. sowohl private als
+auch geschäftliche Anteile besitzen, werden mit Hilfe mehrerer Fahrt-Datensätze
+repräsentiert, die jeweils einem Reise-Datensatz zugeordnet werden.
+Personen treten in drei Rollen auf: Als Halter von Fahrzeugen,
+als Fahrer bei der Durchführung von Fahrten und als Mitfahrer.
+Die Mitfahrer-Tabelle repräsentiert eine n:n-Beziehung zwischen Personen
+und Fahrten.</p>
+</body>
+
+</html>

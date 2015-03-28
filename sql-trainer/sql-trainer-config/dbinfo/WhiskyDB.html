@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Beschreibung zur WhiskyDB</title>
+</head>
+
+<body>
+<h1>Beschreibung zur WhiskyDB</h1>
+<p>Die Datenbank WhiskyDB verwaltet Daten und Beschreibungen 
+von verschiedenen Whiskysorten und hat folgendes (vereinfachtes)
+Datenbankschema:</p>
+<pre>
+WhiskyDB = (
+  Whiskies = (WNr, WMarke, Walter, Alkoholgehalt, Region),
+  WhiskyBeschreibungen =  (WBNr, WNr, Aroma, Geschmack, Abgang),
+
+  WhiskyBeschreibungen(WNr) references Whiskies(WNr)
+)
+</pre>
+
+<p>Jeder Whisky hat eine eindeutige Nummer und ist charakterisiert
+durch Marke, Alter, Alkoholgehalt der Abfüllung und die Region
+aus der er kommt. Beschreibungen zu Aroma, Geschmack und Abgang
+eines Whiskys entstehen, wenn phantasievolle Tester ihre Eindrücke
+eines s.g. Tastings zu Papier bringen. Natürlich reflektieren
+solche Beschreibungen subjektiven Wahrnehmungen und Vorlieben
+und sind außerdem von der Tagesform des jeweiligen Testers
+abhängig. Deshalb kann es mehrere widersprüchliche Beschreibungen
+zum selben Whisky geben.</p>
+
+<p>Die Daten dieser Datenbank stammen aus Angaben einschlägiger
+Whisky-Online-Shops.</p>
+
+</body>
+
+</html>

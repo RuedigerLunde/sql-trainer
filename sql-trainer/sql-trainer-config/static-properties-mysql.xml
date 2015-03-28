@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application-properties>
+	<property name="directory.exercises">exercises</property>
+	<property name="gui.fontscale">1.0</property>
+	<property name="gui.look&amp;feel.usePlatform">false</property>
+	<property name="gui.window.height">700</property>
+	<property name="gui.window.width">700</property>
+	
+	<property name="gui.statement">-- initial test&#xa;select * from Laender</property>
+	<property name="db.jdbc.driver">com.mysql.jdbc.Driver</property>
+	<property name="db.jdbc.url">jdbc:mysql://SERVER/DBNAME</property>
+	<property name="db.conn.server">localhost:3306</property>
+	<property name="db.conn.user">root</property>
+	<property name="db.conn.passwd"></property>
+	<property name="db.names.logical">LaenderDB,WhiskyDB,MediDB,FahrtenbuchDB,MessDB,BookShopDB</property>
+	<property name="db.names.physical">DABAS_MD2_A,DABAS_MD2_A,DABAS_MD2_A,DABAS_MD2_A,DABAS_MD2_A,DABAS_MD2_B</property>
+</application-properties>
