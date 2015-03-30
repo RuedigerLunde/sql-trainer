@@ -13,7 +13,7 @@ If you are a Java developer, you might want to create a customized version of th
       xml (contains dtds an xslt files)
       static-properties.xml (contains default settings)
    src (contains java source)
-   wiki (contains documents about the SQL-Trainer)
+   wiki (contains documents about the SQLTrainer)
    SQLTrainer.jar (runnable jar to start the SQLTrainer) (**)
 ```
 
